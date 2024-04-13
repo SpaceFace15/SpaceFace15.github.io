@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+.main-content {
+    background-color: white;
+    min-height: calc(100% - 120px); /* Adjust the height calculation based on header and footer padding */
+    padding: 60px 20px 60px 20px; /* Top and bottom padding should be equal to header/footer padding */
+    box-sizing: border-box;
+    width: calc(100% - 40px); /* Adjusting for padding */
+    position: absolute;
+    top: 60px; /* Same as header height */
+}
+
+/* Sidebars */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 60px; /* Same as header height */
+    bottom: 60px; /* Same as footer height */
+    width: 20px; /* Adjust sidebar width as needed */
+    background-color: black;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
